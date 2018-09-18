@@ -9,7 +9,7 @@
 
 insdir=/mnt/zabbix-agent   #安装目录
 sourcedir=$PWD
-sname=zabbix-3.2.4
+sname=zabbix-*
 sourcename=${sname}.tar.gz
 
 echo -e "********************dir********************"
@@ -21,7 +21,7 @@ Gcc_len=`rpm -qa gcc| wc -l`
 		echo -e "\033[31m${sname} gcc没有安装，正在安装gcc \033[0m "
 		yum install gcc -y 1>/dev/null
 	fi
-cd $sourcedir && tar xf zabbix-3.2.4.tar.gz && cd zabbix-3.2.4
+cd $sourcedir && tar xf $sname.tar.gz && cd $sname
 	echo -e "\033[32;49;1mmake zabbix ......\033[39;49;0m" 
 	./configure --prefix=$insdir --enable-agent 1>/dev/null && make install 1>/dev/null
 	    if [[ $? != 0 ]];then
