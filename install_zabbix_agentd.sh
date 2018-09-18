@@ -37,7 +37,7 @@ cd $insdir && mkdir logs
 		
 echo -e "\033[32;49;1m 安装目录添加权限 \033[39;49;0m"
 echo -e "******************************************\n"	
-chown -R chai:chai $insdir 1>/dev/null		 #是否存在用户chai，若不存在创建zabbix用户
+chown -R zabbix:zabbix $insdir 1>/dev/null		 
         if [[ $? != 0 ]];then
 		       groupadd zabbix
            useradd -g zabbix -s /sbin/nologin  -M zabbix
