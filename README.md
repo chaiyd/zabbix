@@ -4,7 +4,7 @@
 推送告警至钉钉
 
 * 更改dingtalk中accessToken  secret
-* 编译时，请自行拉取github.com/CatchZeng/dingtalk最新代码，自动拉取可能会拉取不到，或者拉取错误
+* 编译时，请自行拉取 [CatchZeng/dingtalk](https://github.com/CatchZeng/dingtalk) 最新代码，自动拉取可能会拉取不到，或者拉取错误
 * 编译参数
   * CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build dingtalk.go
 * 请参考原工程
